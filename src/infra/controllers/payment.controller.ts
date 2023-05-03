@@ -1,5 +1,6 @@
+import { GetCalculations } from "payment/usecase/get-calculations/get-calculations.usecase";
 import { PaymentSlipValidator } from "../../infra/validator/payment-slip.validator";
-import { CalculatePaymentSlipFine } from "../../payment/usecase/calculate-payment-slip-fine.usecase";
+import { CalculatePaymentSlipFine } from "../../payment/usecase/calculate-payment-slip-fine/calculate-payment-slip-fine.usecase";
 import { HttpServer } from "../http/http.server";
 import { Response } from "express";
 
@@ -11,10 +12,11 @@ type PaymentSlipProps = {
 export class PaymentSlipController {
   constructor(
     readonly httpServer: HttpServer,
-    readonly calculatePaymentSlipFineUseCase: CalculatePaymentSlipFine.UseCase
+    readonly calculatePaymentSlipFineUseCase: CalculatePaymentSlipFine.UseCase,
+    readonly getCalculations: GetCalculations.UseCase
   ) {
     httpServer.on(
-      "get",
+      "post",
       "/payment-slip",
       async (
         params: any,
@@ -35,5 +37,9 @@ export class PaymentSlipController {
         return calculate;
       }
     );
+
+    httpServer.on("get", "/payment-slip", async () => {
+      return await getCalculations.execute();
+    });
   }
 }
