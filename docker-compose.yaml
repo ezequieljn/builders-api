@@ -3,6 +3,7 @@ version: '3.9'
 services:
   app:
     build: .
+    command: .docker/entrypoint.sh
     volumes:
       - ./:/home/app
     ports:
