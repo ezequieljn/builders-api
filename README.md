@@ -46,6 +46,8 @@ O projeto também pode ser testado em `https://builders.dok3s.srobot.dev`, que e
 
 ##### Rotas HTTP
 
+No projeto, há dois arquivos para ajudar nos testes: api.http, que permite fazer requisições diretamente no VSCode, e builders-api.postman_collection, que pode ser importado no Postman.
+
 A seguir, são listadas todas as rotas HTTP disponíveis neste projeto:
 
 - **POST /payment-slip**
