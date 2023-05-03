@@ -21,7 +21,7 @@ Antes de executar o projeto, é necessário ter o Docker instalados na máquina.
 1. Clone o repositório:
 
 ```shell
-git https://github.com/ezequieljn/builders-api
+git clone https://github.com/ezequieljn/builders-api
 ```
 
 2. Inicie o container:
