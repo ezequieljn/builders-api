@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: builders-service
+  namespace: builders
+spec:
+  selector:
+    app: builders-server
+  type: ClusterIP
+  ports:
+    - name: builders-service
+      port: 3030
+      targetPort: 3030
+      protocol: TCP

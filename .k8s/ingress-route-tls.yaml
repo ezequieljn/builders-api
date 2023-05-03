@@ -1,0 +1,16 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: builders-route-tls
+  namespace: builders
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`builders.dok3s.srobot.dev`)
+      kind: Rule
+      services:
+        - name: builders-service
+          port: 3030
+  tls:
+    secretName: builders-ssl-cert

@@ -1,0 +1,16 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: builders-ingress-route
+  namespace: builders
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`builders.dok3s.srobot.dev`)
+      kind: Rule
+      services:
+        - name: builders-service
+          port: 3030
+      middlewares:
+        - name: redirect-scheme-https
