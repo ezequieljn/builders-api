@@ -4,7 +4,7 @@ Este projeto é composto por um backend desenvolvido em **Node.js**, que tem com
 
 ### Sobre
 
-O projeto foi construído seguindo algumas boas práticas, como **Clean Architecture**, visando o desacoplamento e a criação de testes, como testes de unidade, testes de integração e testes E2E.
+O projeto foi construído seguindo algumas boas práticas, como **Clean Architecture** (**SOLID**, **Ports & Adapters** e **Orion Architecture**), visando o desacoplamento e a criação de testes, como testes de unidade, testes de integração e testes E2E.
 
 A cobertura de testes está acima de **90%** e pode ser verificada por meio do comando.
 
