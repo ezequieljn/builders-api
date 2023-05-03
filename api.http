@@ -1,0 +1,12 @@
+### Create payment slip
+POST http://localhost:3030/payment-slip
+Content-Type: application/json
+
+{
+	"bar_code": "34191790010104351004791020150008191070069000",
+  "payment_date": "2023-01-01"
+}
+
+### Request metrics
+GET http://localhost:3030/payment-slip
+

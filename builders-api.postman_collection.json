@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "df65b2ef-18d7-4269-82c9-9c4a085454a5",
+		"name": "builders-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6266707",
+		"_collection_link": "https://speeding-zodiac-786948.postman.co/workspace/builders~703ad3c9-90ff-4159-8270-0dc5daac446e/collection/6266707-df65b2ef-18d7-4269-82c9-9c4a085454a5?action=share&creator=6266707&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "create payments",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3030/payment-slip",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"payment-slip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "metrics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3030/payment-slip",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3030",
+					"path": [
+						"payment-slip"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
