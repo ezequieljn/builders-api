@@ -9,4 +9,8 @@ export class PaymentRepositoryMemory
     async save(entity: PaymentSlipEntity): Promise<void> {
         this.paymentEntities.push(entity);
     }
+    async find(): Promise<PaymentSlipEntity[]> {
+        return this.paymentEntities;
+    }
+
 }
