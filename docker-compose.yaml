@@ -5,3 +5,16 @@ services:
     build: .
     volumes:
       - ./:/home/app
+    ports:
+      - "3030:3030"
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: "root"
+      POSTGRES_PASSWORD: "root"
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./.docker/database/init-db.sql:/docker-entrypoint-initdb.d/docker_postgres_init.sql
